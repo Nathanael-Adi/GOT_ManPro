@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css"/> 
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css"> 
+    <link rel="stylesheet" href="/css/buku1.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script> 
+    <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script> 
+    <title>Buku 1</title>
+</head>
+<body>
+    <div class="topnav">
+        <nav>
+            <h2 class="logo">Mother Dragon</h2>
+            <ul>
+                <li><a href="homepage">Home</a></li>
+                <li><a href="buku">Buku</a></li>
+                <li><a href="grafikBar1">Grafik Bar</a></li>
+                <li><a href="">Grafik Tak Berarah</a></li>    
+            </ul>
+
+        </nav>
+    </div>
+
+    <main class="bb" style="height:200px;">
+        <div class="home__container">
+            <div>
+                <li><a href="grafikBar1">Buku ke-1</a></li>
+            </div>
+            <div>
+                <li><a href="grafikBar2">Buku ke-2</a></li>
+            </div>
+            <div>
+                <li><a href="grafikBar3">Buku ke-3</a></li>
+            </div>
+            <div  class="home__data">
+                <h3 class="home__title" style="color:#0e0f11">Grafik Bar Buku Keempat Game of Thrones</h3>                  
+            </div>
+            <div>
+                <li><a href="grafikBar5">Buku ke-5</a></li>
+            </div>
+        </div>
+
+    </main>
+    <!-- Grafik -->
+    <canvas id="graphChart" width="250"></canvas>
+
+    <script>
+    var canvasElement = document.getElementById ("graphChart");
+
+    var config = {
+        type: "bar",
+        data: {
+            labels: ["Cersei-Lannister", "Jaime-Lannister", "Brienne-of-Tarth", "Arya-Stark", "Arianne-Martell",
+            "Aeron-Greyjoy", "Margaery-Tyrell", "Joffrey-Baratheon", "Aerys-II-Targaryen", "Aurane-Waters"],
+            datasets: [
+                {
+                    label: "Top 10 interaksi terbanyak",
+                    data: [52, 41, 27, 16, 15, 14, 13, 9, 9, 9],
+                },
+            ],
+        },
+    };
+
+    var graphicChart = new Chart(canvasElement, config);
+</script>
+</body>
+</html>

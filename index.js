@@ -143,7 +143,7 @@ app.get ('/buku4', async (req, res) => {
     res.render('buku4', {userData});
 });
 
-//buku4
+//buku5
 const getBook5 = (conn) => {
     return new Promise ((resolve, rejects) => {
         conn.query(`SELECT * from book5`, (err, result) => {
@@ -163,6 +163,51 @@ app.get ('/buku5', async (req, res) => {
     var userData = await getBook5(conn);
     conn.release();
     res.render('buku5', {userData});
+});
+
+//grafBuku1
+const getGraph1 = (conn) => {
+    return new Promise ((resolve, rejects) => {
+        conn.query(`SELECT * from book1`, (err, result) => {
+            if (err)
+            {
+                rejects(err);
+            }
+            else{
+                resolve(result)
+            }
+        })
+    })
+};
+
+app.get ('/grafikBar1', async (req, res) => {
+    const conn = await dbConnect();
+    conn.release();
+    res.render('grafBuku1');
+});
+
+app.get ('/grafikBar2', async (req, res) => {
+    const conn = await dbConnect();
+    conn.release();
+    res.render('grafBuku2');
+});
+
+app.get ('/grafikBar3', async (req, res) => {
+    const conn = await dbConnect();
+    conn.release();
+    res.render('grafBuku3');
+});
+
+app.get ('/grafikBar4', async (req, res) => {
+    const conn = await dbConnect();
+    conn.release();
+    res.render('grafBuku4');
+});
+
+app.get ('/grafikBar5', async (req, res) => {
+    const conn = await dbConnect();
+    conn.release();
+    res.render('grafBuku5');
 });
 
 app.listen (port, () => {
