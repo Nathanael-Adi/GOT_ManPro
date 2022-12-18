@@ -1,6 +1,8 @@
 # GOT_ManPro
 
-==Untuk menjalankan website==
+Untuk menjalankan website
+
+Harap buat database dengan nama got_character_book1, lalu import sqlnya
 
 1. Clone project / download zip
 2. Buka folder project yang sudah di download ataupun di clone
