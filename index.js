@@ -210,6 +210,36 @@ app.get ('/grafikBar5', async (req, res) => {
     res.render('grafBuku5');
 });
 
+app.get ('/grafikTakBerarah1', async (req, res) => {
+    const conn = await dbConnect();
+    conn.release();
+    res.render('graphTakBerarahBook1');
+});
+
+app.get ('/grafikTakBerarah2', async (req, res) => {
+    const conn = await dbConnect();
+    conn.release();
+    res.render('graphTakBerarahBook2');
+});
+
+app.get ('/grafikTakBerarah3', async (req, res) => {
+    const conn = await dbConnect();
+    conn.release();
+    res.render('graphTakBerarahBook3');
+});
+
+app.get ('/grafikTakBerarah4', async (req, res) => {
+    const conn = await dbConnect();
+    conn.release();
+    res.render('graphTakBerarahBook4');
+});
+
+app.get ('/grafikTakBerarah5', async (req, res) => {
+    const conn = await dbConnect();
+    conn.release();
+    res.render('graphTakBerarahBook5');
+});
+
 app.listen (port, () => {
     console.log("Connected to port: " + port)
 });
